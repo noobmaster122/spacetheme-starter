@@ -7,7 +7,7 @@
 namespace Spacetheme\widgets;
 
 class Banner extends \WP_Widget {
-    function __construct() {
+    public function __construct() {
 
         parent::__construct(
         // widget ID

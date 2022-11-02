@@ -7,7 +7,7 @@ use \Spacetheme\widgets\SpecialOffer;
 
 
 class Base{
-    function __construct(){
+    public function __construct(){
 
         // Add Widget scripts
         add_action('admin_enqueue_scripts', array($this, 'scripts'));

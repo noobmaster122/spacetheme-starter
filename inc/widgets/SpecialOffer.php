@@ -7,7 +7,7 @@
 namespace Spacetheme\widgets;
 
 class SpecialOffer extends \WP_Widget {
-    function __construct() {
+    public function __construct() {
 
 
         // Add Widget scripts
