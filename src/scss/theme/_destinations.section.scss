@@ -1,0 +1,20 @@
+@use "./spacetheme.theme" as *;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+    .__spacetheme-destinations-section h4{
+        font-size: 1rem;
+    }
+    .spacethemeDestinationSlider h4{
+        font-size: 1.5rem;
+    }
+    .__spacetheme-destinations-section h3{
+        font-size: 1.5rem;
+    }
+    .__spacetheme-destinations-section p{
+        font-size: 0.7rem;
+    }
+}
+

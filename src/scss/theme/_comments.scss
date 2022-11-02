@@ -1,0 +1,126 @@
+@use "./spacetheme.theme" as *;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+.spacetheme__comments-template-container{
+    width: 60%;
+    margin: auto;
+}
+.comment-respond{
+    padding: 20px;
+    padding-left:40px;
+    }
+    form#commentform p:first-child {
+        width: 60%;
+    }
+    
+    form#commentform p:not(:first-child) {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    .comment-body {
+        background-color: whitesmoke;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px;
+        box-shadow: map-get($theme-schema, "box-shadow-bordered");
+    }
+    .comment-metadata a {
+        color: #222;
+        font-style: italic;
+        font-size: 13px;
+    }
+    
+    .comment-author img {
+        box-shadow: map-get($theme-schema, "box-shadow-heavy");
+        border-radius: 30% 70% 41% 59% / 57% 18% 82% 43%;
+    }
+    .comment-content {
+        margin-top: 15px;
+    }
+    h2.comments-title {
+        margin-left: 40px;
+    }
+    form#commentform input {
+        border: 0;
+        outline: 0;
+        box-shadow: map-get($theme-schema, "box-shadow-bordered");
+        border-radius: 3px;
+        height: 40px;
+        max-width: 400px;
+        width: 400px;
+    }
+    .comment-form-cookies-consent label {
+        margin: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 600;
+        font-size: 13px;
+    }
+    .comment-form-cookies-consent input{
+        box-shadow: unset !important;
+        width: auto !important;
+        max-width: auto !important;
+    }
+    p.comment-form-cookies-consent {
+        width: auto !important;
+        flex-direction: row !important;
+        gap: 10px;
+    }
+    form#commentform p {
+        margin-bottom: 5px;
+    }
+    #commentform textarea {
+        /* border: 2px solid red; */
+        width: 400px;
+        max-width: 400px;
+        border: 0;
+        border-radius: 3px;
+        box-shadow: map-get($theme-schema, "box-shadow-bordered");
+    }
+    ul.comment-list {
+        padding-left: 0;
+    }
+    
+    //comments section container
+    .comments-area{
+        margin-top: 50px;
+        padding: 0px 50px;
+    }
+    //reset ul styles
+    .comments-area ul {
+        list-style: none;
+    }
+    //reset links color
+    .comments-area a{
+        color: #222;
+    }
+    
+    @media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+        .single-stat-container{
+            width: 50%;
+        }
+        .comments-area{
+           padding: 0;
+        }
+        .comment-respond{
+            padding-left: 20px;
+        }
+        form#commentform p{
+            width: 100% !important;
+        }
+        #commentform textarea{
+            width: 100%;
+            max-width: 100%;
+        }
+        form#commentform input{
+            width: 100%;
+            max-width: 100%;
+        }
+        .spacetheme__comments-template-container{
+            width: 100%;
+        }
+    }
+    

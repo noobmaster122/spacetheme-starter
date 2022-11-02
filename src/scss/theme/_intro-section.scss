@@ -1,0 +1,95 @@
+@use "./spacetheme.theme" as *;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+// .__spacetheme-intro-right-block > div:first-child img{
+//     width: 250px;
+// }
+.__spacetheme-intro-section{
+    .swiper-pagination-bullet{
+        width: .7rem;
+        height: .7rem;
+    }
+    .swiper-pagination-bullet-active{
+        background: #000;
+    }
+}
+.__spacetheme-intro-right-block{
+
+    & > div:first-child{
+        height: 70%;
+    }
+    & > div:last-child{
+        height: 30%;
+
+    }    
+}
+.__spacetheme-intro-right-block > div:last-child{
+
+    & > h2{
+        height: 30%;
+    }
+    & > .swiper{
+        height: 70%;
+
+    }
+
+}
+
+
+@media only screen and (max-width: map-get($grid-breakpoints, "lg")) {
+    .__spacetheme-intro-right-block > div:first-child img{
+        width: 300px;
+    }
+    .__spacetheme-intro-right-block{
+
+        &> div:last-child p{
+            font-size: 0.87rem;
+        }    
+    }
+}
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+
+    .__spacetheme-intro-right-block > div:first-child img{
+        width: 250px;
+    }
+
+    .__spacetheme-intro-right-block{
+
+        &> div:first-child{
+            height: 60%;
+        }
+        &> div:last-child{
+            height: 40%;
+            p{
+                font-size: 0.84rem;
+            }
+        }    
+    }
+
+}
+@media only screen and (max-width: map-get($grid-breakpoints, "sm")) {
+
+    .__spacetheme-intro-right-block > div:first-child img{
+        width: 200px;
+    }
+
+    .__spacetheme-intro-right-block > div:last-child{
+
+        & > h2{
+            height: 15%;
+        }
+        & > .swiper{
+            height: 85%;
+            p{
+                font-size: 0.8rem;
+            }
+        }
+    
+    }
+}
+@media only screen and (min-width: map-get($grid-breakpoints, "xl")) {
+    .__spacetheme-intro-right-block > div:first-child img{
+        width: 380px;
+    }
+}

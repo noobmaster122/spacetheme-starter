@@ -1,0 +1,62 @@
+<?php
+
+namespace Spacetheme\classes;
+use \Spacetheme\traits\SingletonTrait;
+
+use \Spacetheme\post_types\CustomPostTypes;
+use \Spacetheme\ajax\IntroSwiperAjax; 
+use \Spacetheme\ajax\HistorySectionSlider; 
+use \Spacetheme\ajax\DestinationSliderAjax; 
+use \Spacetheme\ajax\ActivitieSectionAjax; 
+use \Spacetheme\ajax\ReviewSlider;
+use \Spacetheme\ajax\TripSlider; 
+
+use \Spacetheme\classes\Assets;
+use \Spacetheme\classes\Setup;
+use \Spacetheme\helpers\DebugHelpers;
+use \Spacetheme\widgets\Base as WidgetsBase;
+
+
+
+class Base{
+
+    use SingletonTrait;
+
+    function __construct(){
+        //put classes in filter action
+        // so user can remove specific sections
+
+        //loading theme assets
+        Assets::get_instance();
+        // theme setup
+        Setup::get_instance();
+        //load custom post types
+        CustomPostTypes::get_instance();
+        /**
+         * 
+         * Load custom widgets
+         */
+        new WidgetsBase();
+        /**
+         * Load Ajax Classes
+         * 
+         */
+        // //load destinations slider ajax handlers
+        // new DestinationSliderAjax();
+        // //load activities slider ajax handler
+        // new ActivitieSliderAjax();
+        // //load reviews slider ajax handler
+        // new ReviewSlider();
+        IntroSwiperAjax::get_instance();
+        HistorySectionSlider::get_instance();
+        DestinationSliderAjax::get_instance();
+        ActivitieSectionAjax::get_instance();
+        ReviewSlider::get_instance();
+        TripSlider::get_instance();
+    
+
+
+    }
+}
+
+?>

@@ -1,0 +1,106 @@
+@use "./spacetheme.theme" as theme;
+
+@mixin spacetheme-contact-form-input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 2%) 0px 1px 3px 0px, rgb(27 31 35 / 15%) 0px 0px 0px 1px;
+}
+
+.spacetheme__contact-page-template-container{
+    .wpcf7-form label{
+        width: 100%;
+    }
+    .wpcf7-text,.wpcf7-email,.wpcf7-number{
+        height: 40px;
+        @include spacetheme-contact-form-input;
+    }
+    .wpcf7-textarea{
+        height: 200px;
+        @include spacetheme-contact-form-input;
+    }
+    .wpcf7-submit{
+        height: 45px;
+        outline: 0;
+        padding: 0 20px;
+        background-color: transparent;
+        color: theme.$secondary;
+        border: 1px solid theme.$secondary;
+        border-radius: 5px;
+        transition: background-color 0.3s ease-in-out;
+    }
+    .wpcf7-submit:hover{
+        background-color: #533483;
+        color: white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .wpcf7-response-output{
+        padding: 10px !important;
+        border-radius: 10px;
+        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    }
+}
+
+.spacetheme__main-footer{
+    .wpcf7-email{
+        @include spacetheme-contact-form-input;
+        height: 40px;
+        padding-left: 10px;
+    box-shadow: rgb(0 0 0 / 16%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+    }
+    .wpcf7-submit{
+        @include  spacetheme-contact-form-input;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid white;
+    }
+    .wpcf7-response-output{
+        padding: 10px !important;
+        border-radius: 10px;
+        box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    }
+}
+
+// this might need an update if contact form 7 html structure is changed in future updates! 
+.__spacetheme-subscription-section{
+
+    form{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+
+        br{
+            display: none;
+        }
+
+        p{
+            margin: 0;
+            margin: auto 2px;
+    
+            label {
+                margin: 0;
+            }
+        }
+
+    }
+
+    .wpcf7-email{
+        width: 100%;
+        outline: 0;
+        border: 0;
+        padding-left: 15px;
+    }
+    .wpcf7-spinner{
+        display: none;
+    }
+    .wpcf7-submit{
+        background-color: #533483;
+        border: none;
+        padding: 6px 20px;
+        border-radius: 5px;
+        color: white;
+    }
+}

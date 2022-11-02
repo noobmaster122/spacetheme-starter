@@ -1,0 +1,10 @@
+@use "./spacetheme.theme" as *;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+
+    .__spacetheme-reviews-section{
+        width: 95% !important;
+    }
+}

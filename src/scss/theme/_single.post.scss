@@ -1,0 +1,17 @@
+@use "./spacetheme.theme" as *;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+.search-result-excerpt-styles{
+    box-shadow: map-get($theme-schema, "box-shadow-bordered");
+}
+.spacetheme__single-page-content-container{
+    width: 90%;
+    margin: auto;
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+    .spacetheme__single-page-content-container{
+        width: 95%;
+    }
+}

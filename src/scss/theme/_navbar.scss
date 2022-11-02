@@ -1,0 +1,87 @@
+@use "./spacetheme.theme" as spacetheme;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+//hide the down icon in dropdown
+#main-menu-languages-dropdown > button{
+    background-color: transparent !important;
+    &::after{
+        display: none !important;
+    }
+}
+
+.main-navbar-container{
+    top:0;
+    transition: background 0.3s ease-in-out;
+}
+.main-navbar-container > div:first-child{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: padding 0.3s ease-in-out;
+}
+.main-navbar-container > div:last-child{
+    transition: padding 0.3s ease-in-out;
+}
+.spacetheme__contact-us-btn{
+    border-radius: 20px !important;
+    background-color: spacetheme.$transparent !important;
+    padding: 10px 20px !important;
+}
+
+//glass morphism effect
+.spacetheme__glass-bg{
+    background: rgba(128, 128, 0,0.6);
+    box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+    backdrop-filter: blur(5.1px);
+    -webkit-backdrop-filter: blur(5.1px);
+}
+
+.spacetheme__show-mobile-nav{
+    margin-left: 0 !important;
+}
+.spacetheme__navbar-light-bg{
+    background-color: spacetheme.$btn-light-bg !important;
+}
+
+
+@media only screen and (min-width: map-get($grid-breakpoints, "sm")) {
+
+
+}
+@media only screen and (min-width: map-get($grid-breakpoints, "md")) {
+    nav#main-navbar-container{
+        
+        .navbar-brand > img {
+            width: 80px;
+            height: auto;
+        }
+    }
+}
+@media only screen and (min-width: map-get($grid-breakpoints, "lg")) {
+    nav#main-navbar-container{
+
+        .navbar-brand > img {
+            width: 90px;
+            height: auto;
+        }
+    }
+}
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+    nav#main-navbar-container{
+
+    }
+    .__spacetheme-main-menu-list-items-container{
+        margin-left: auto;
+    }
+    .__spacetheme-main-menu-list-items-container > div a{
+        font-size: 0.6rem;
+    }
+    .navbar-brand object{
+        height: 60px;
+    }
+    .__spacetheme-main-menu-languages-dropdown{
+        object{
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

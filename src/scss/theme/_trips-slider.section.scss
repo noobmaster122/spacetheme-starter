@@ -1,0 +1,23 @@
+@use "./spacetheme.theme" as *;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+.__spacetheme-trips-slider-section h2{
+    font-size: 4rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: map-get($grid-breakpoints, "lg")) {
+
+
+}
+@media only screen and (max-width: map-get($grid-breakpoints, "md")) {
+
+    .__spacetheme-trips-slider-section h2{
+        font-size: 2rem;
+    }
+    .__spacetheme-trips-slider-section a{
+        font-size: 0.8rem !important;
+    }
+}

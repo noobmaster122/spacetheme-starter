@@ -1,0 +1,29 @@
+@use "./spacetheme.theme" as spacetheme;
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+
+.spacetheme__main-footer-menus-row{
+    padding-left: 90px;
+}
+.spacetheme__social-network-menu-container a{
+    transition: transform 0.3s ease-in-out;
+}
+.spacetheme__social-network-menu-container a:hover{
+    transform: translateY(-5px);
+}
+// footer .row div:not(:last-child){
+//     border: 0;
+//     border-right: 1px solid $border-color;
+// }
+@media only screen and (max-width: map-get($grid-breakpoints, "lg")) {
+    footer .row div{
+        border: 0;
+    }
+    // footer .row div:not(:last-child){
+    //     border: 0;
+    //     border-bottom: 1px solid $border-color;
+    // }
+    .spacetheme__main-footer-menus-row{
+        padding-left: 0;
+    }
+}

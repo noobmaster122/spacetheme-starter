@@ -1,0 +1,32 @@
+//#f3f6f9;
+$transparent : hsla(0,0%,100%,.15);
+$secondary: #593325;
+$primary: rgba(128, 128, 0,0.9);
+$light-primary: seashell;
+$btn-light-bg : hsla(0,0%,100%,.15);
+$light-dark: rgba(0,0,0,.2);
+$box-shadow-bordered : rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+$box-shadow-heavy : rgb(0 0 0 / 10%) 0px 20px 25px, rgb(0 0 0 / 4%) 0px 10px 10px;
+$box-shadow-bordered: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+$box-shadow-heavy-bordered: rgb(0 0 0 / 5%) 0px 6px 24px 0px, rgb(0 0 0 / 8%) 0px 0px 0px 1px;
+$box-shadow-dropdown-menu: rgb(0 0 0 / 20%) 0px 5px 5px -3px, rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 2px;
+$box-shadow-inset-light: inset 0px -1px 1px #e7ebf0;
+$box-shadow-light: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+$wd-light-beige: #CFB9B1;
+$wd-dark-beige: #A66F5B;
+
+// naming schema [css attr][light/heavy][further details]
+$theme-schema: (
+    "hover-bg-light": #F3F6F9,
+    "box-shadow-heavy": $box-shadow-heavy,
+    "box-shadow-bordered": $box-shadow-bordered,
+    "box-shadow-light" : $box-shadow-light,
+    "box-shadow-inset-light": $box-shadow-inset-light,
+    "box-shadow-heavy-bordered" : $box-shadow-heavy-bordered,
+    "box-shadow-dropdown-menu" : $box-shadow-dropdown-menu,
+    "border-color-light": #E0E3E7,
+    "div-bg-light": rgba(255,255,255,0.72),
+    "backdrop-color": #1e1e1e,
+    "light-dark" : $light-dark,
+    "primary" : $primary,
+);

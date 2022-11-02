@@ -1,0 +1,1 @@
+export const AJAX_ENDPOINT_PREFIX = "spacetheme_ajax_prefix";

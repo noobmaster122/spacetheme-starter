@@ -1,0 +1,17 @@
+@use "./theme/common";
+@use "./theme/navbar";
+@use "./theme/landing.section";
+@use "./theme/footer";
+@use "./theme/destinations.section";
+@use "./theme/banner.one";
+@use "./theme/comments";
+@use "./theme/sidebar";
+@use "./theme/single.post";
+@use "./theme/contact_form_styles";
+@use "./theme/subscription.section";
+@use "./theme/history.section";
+@use "./theme/trips-slider.section";
+@use "./theme/intro-section";
+//new design
+@use "./theme/reviews.section";
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";

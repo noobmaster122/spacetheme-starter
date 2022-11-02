@@ -1,0 +1,44 @@
+@keyframes spacetheme-skeleton-animation
+{
+  
+  0%
+  {
+    right: 100%;
+  }
+  
+  50%
+  {
+    right: -128px;
+  }
+  
+  100%
+  {
+    right: 100%;
+  }
+  
+}
+.spacetheme__skeleton
+{
+overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+    box-shadow:rgb(0 0 0 / 10%) 0px 0px 5px 0px,
+    rgb(0 0 0 / 10%) 0px 0px 1px 0px;
+}
+.spacetheme__skeleton:before{
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), #FFF, rgba(255, 255, 255, 0));
+    animation: spacetheme-skeleton-animation 1.25s infinite;
+    display: block;
+    height: 100%;
+    width: 100px;
+    position: absolute;
+    content:"";
+}
+
+.spacetheme__background-img{
+  position:absolute;z-index:-1;object-fit:cover;
+}
+button > * {
+  pointer-events: none;
+}
