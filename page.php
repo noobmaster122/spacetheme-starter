@@ -1,12 +1,5 @@
 <?php
-    /**
-     * 
-     * 
-     * 
-     * 
-     */
-
- get_header(); 
+ get_header();
 
 (function(){
     $postID = get_queried_object_id();
@@ -31,7 +24,7 @@
                 </div>
             </div>
         </section>
-    <?php 
+    <?php
 
 })();
 

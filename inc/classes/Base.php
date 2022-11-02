@@ -1,6 +1,7 @@
 <?php
 
 namespace Spacetheme\classes;
+
 use \Spacetheme\traits\SingletonTrait;
 
 use \Spacetheme\post_types\CustomPostTypes;
@@ -22,7 +23,7 @@ class Base{
 
     use SingletonTrait;
 
-    function __construct(){
+    public function __construct() {
         //put classes in filter action
         // so user can remove specific sections
 
@@ -33,29 +34,22 @@ class Base{
         //load custom post types
         CustomPostTypes::get_instance();
         /**
-         * 
+         *
          * Load custom widgets
          */
         new WidgetsBase();
         /**
          * Load Ajax Classes
-         * 
+         *
          */
-        // //load destinations slider ajax handlers
-        // new DestinationSliderAjax();
-        // //load activities slider ajax handler
-        // new ActivitieSliderAjax();
-        // //load reviews slider ajax handler
-        // new ReviewSlider();
-        IntroSwiperAjax::get_instance();
-        HistorySectionSlider::get_instance();
-        DestinationSliderAjax::get_instance();
-        ActivitieSectionAjax::get_instance();
-        ReviewSlider::get_instance();
-        TripSlider::get_instance();
-    
-
-
+        apply_filters( "spacetheme_sections", array(
+            IntroSwiperAjax::get_instance(),
+            HistorySectionSlider::get_instance(),
+            DestinationSliderAjax::get_instance(),
+            ActivitieSectionAjax::get_instance(),
+            ReviewSlider::get_instance(),
+            TripSlider::get_instance(),
+        ) );
     }
 }
 
