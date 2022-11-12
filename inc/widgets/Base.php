@@ -3,7 +3,15 @@
 namespace Spacetheme\widgets;
 use \Spacetheme\widgets\Banner;
 use \Spacetheme\widgets\SpecialOffer;
+use \Spacetheme\widgets\Destinations;
 
+/**
+ * 
+ * create widget class
+ * add its namespace here
+ * register it
+ * 
+ */
 
 
 class Base{
@@ -18,6 +26,10 @@ class Base{
                 'id'            => 'banner-sidebar-1',
             ) );
             register_sidebar( array(
+                'name'          => __( 'Desitinations widget', SPACETHEME_TEXTDOMAIN ),
+                'id'            => 'spacetheme-destinations-widget',
+            ) );
+            register_sidebar( array(
                 'name'          => __( 'banner Sidebar second', SPACETHEME_TEXTDOMAIN ),
                 'id'            => 'banner-sidebar-2',
             ) );
@@ -27,6 +39,7 @@ class Base{
             ) );
             register_widget( '\Spacetheme\widgets\Banner' );
             register_widget( '\Spacetheme\widgets\SpecialOffer' );
+            register_widget( '\Spacetheme\widgets\Destinations' );
 
         } );
 

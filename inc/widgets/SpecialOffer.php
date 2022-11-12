@@ -37,7 +37,7 @@ class SpecialOffer extends \WP_Widget {
                     <span class="text-light px-2 pb-3 text-center" style="font-size:12px;">
                         <?php _e($data['banner-desc'], SPACETHEME_TEXTDOMAIN); ?>
                     </span>
-                    <a href="<?php echo $data['banne-link']; ?>" class="shadow-none btn btn-sm text-light spacetheme__contact-us-btn mb-3 "
+                    <a href="<?php echo $data['banner-link']; ?>" class="shadow-none btn btn-sm text-light spacetheme__contact-us-btn mb-3 "
                         role="button" style="font-size:12px;">
                         <?php _e('Réserver aujourd\'hui', SPACETHEME_TEXTDOMAIN); ?>
                         <i class='fa-solid fa-arrow-right-long ml-2'></i>
